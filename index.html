@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog age calculator</title>
+	<link rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous">
+	<style>
+		.st{
+		background-image:url('banner.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.btn1 {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #60a3bc;
+padding: 20px;
+border-radius: 50px;
+border: none;
+height: 50px;
+width: 20%;
+transition: all 0.4s ease 0s;
+margin: 4%;
+}
+.btn1:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+label
+{
+ font-size: 25px;
+ margin-left: 5%;
+ color: #0000ff;
+}
+input{
+	height: 25px;
+	
+	border-radius: 50px;
+	width: 200px;
+	font-size:25px;
+}
+.short
+{
+	background-color: white;
+	height:auto;
+	border-radius: 50px;
+	text-align: center;
+}
+h1
+{
+	color:#61045F;
+}
+</style>
+</head>
+<body class="st">
+<div class="short"><img src="logodog.jpg" height="300px" width="400px" style="border: 2px solid black; border-radius:25px;"></div>
+<form style="text-align: center; margin-top: 2%; margin-left:2%;">
+<div><i class="fa fa-calculator" aria-hidden="true" style="font-size: 30px;"></i><h1>DOG Age Calculator</h1></div>
+          <label>Enter your age in years:</label>
+          	<input type="text" id="humans"><br><br>
+          	<label>Dog Age :</label>
+          	<input TYPE="text" id="dog" style="margin-left: 10%;"><br>
+           <input type="button" class="btn1" value="Calculate Age" onclick="cal()" style="font-size: 25px; margin-left:13%;" >    
+        </form>
+<script>
+function cal() 
+{
+var a = document.getElementById('humans').value;
+if (a >= 21)
+{
+  b = (a - 21)/4;
+  b1=parseInt(b);
+  b2=b-b1;
+  b3=12*b2;
+  b4=b1+2;
+  var c=Math.floor(b);
+  var d=Math.round((b-c)*12);
+  document.getElementById('dog').value=b4+' year '+b3+' month ';
+}
+ else 
+{
+  b = a/10.5;
+  b2=parseInt(b);
+  b1=b-b2;
+  b3=12*b1;
+  document.getElementById('dog').value=b2+' '+' year '+' '+parseInt(b3)+' month ';
+}
+}
+</script>
+</body>
+</html>
